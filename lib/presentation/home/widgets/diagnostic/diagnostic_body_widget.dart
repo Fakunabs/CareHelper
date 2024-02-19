@@ -25,7 +25,10 @@ class DiagnosticBodyWidget extends StatelessWidget {
                   children: [
                     Text(
                       'Conclusion',
-                      style: Theme.of(context).textTheme.titleMedium!.copyWith(
+                      style: Theme.of(context)
+                          .textTheme
+                          .headlineSmall!
+                          .copyWith(
                             color: Theme.of(context).scaffoldBackgroundColor,
                           ),
                     ),
@@ -34,9 +37,10 @@ class DiagnosticBodyWidget extends StatelessWidget {
                     ),
                     Flexible(
                       child: Text(
-                        'Viêm đại tràng cấp tính do nhiễm khuẩn',
-                        style: Theme.of(context).textTheme.bodyLarge!.copyWith(
-                            color: Theme.of(context).scaffoldBackgroundColor),
+                        'Stable blood pressure',
+                        style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                              color: Theme.of(context).scaffoldBackgroundColor,
+                            ),
                       ),
                     ),
                   ],
@@ -47,8 +51,8 @@ class DiagnosticBodyWidget extends StatelessWidget {
               height: 24,
             ),
             Text(
-              'Trong trường hợp này, chẩn đoán bệnh mẫu được đưa ra là viêm đại tràng cấp do nhiễm khuẩn. Chẩn đoán này được dựa trên các yếu tố sau: \n \n - Tiền sử ăn hải sản\n - Đau bụng, tiêu chảy đột ngột\n - Đau bụng vùng thượng vị\n - Xét nghiệm tìm máu ẩn trong phân (+)',
-              style: Theme.of(context).textTheme.bodyLarge,
+              'Be mindful of any sudden changes in your blood pressure readings or any symptoms such as severe headaches, dizziness, chest pain, or shortness of breath. If you experience any of these symptoms, don\'t hesitate to reach out to me so we can address them promptly.',
+              style: Theme.of(context).textTheme.bodyMedium,
             ),
           ],
         ),

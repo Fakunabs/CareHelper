@@ -32,17 +32,17 @@ class __BloodPressurePageState extends State<_BloodPressurePage> {
       builder: (context, state) {
         return Scaffold(
           appBar: const CommonAppBar(
-            title: '12/01/2024',
+            title: '05/01/2024',
             hasBoxDecoration: false,
           ),
           body: SingleChildScrollView(
             padding: const EdgeInsets.fromLTRB(20, 1, 20, 10),
             child: Column(
               children: [
-                _buildTitle('Huyết áp ổn định'),
+                _buildTitle('Stable blood pressure'),
                 _buildDoctorInfo(
-                  doctorName: 'Bác sĩ Lê Văn Liêm',
-                  hospital: 'Bệnh viện Đà Nẵng',
+                  doctorName: 'Dr. Lê Văn Liêm',
+                  hospital: 'Danang Hospital',
                 ),
                 const SizedBox(height: 15),
                 SizedBox(
@@ -123,9 +123,9 @@ class __BloodPressurePageState extends State<_BloodPressurePage> {
       backgroundColor: ColorStyles.silver2,
       thumbColor: ColorStyles.dodgerBlue,
       children: {
-        0: _buildSegment('Tổng quan', isSelected: _groupValue == 0),
-        1: _buildSegment('Xét nghiệm', isSelected: _groupValue == 1),
-        2: _buildSegment('Ghi chú', isSelected: _groupValue == 2),
+        0: _buildSegment('Overall', isSelected: _groupValue == 0),
+        1: _buildSegment('Test result', isSelected: _groupValue == 1),
+        2: _buildSegment('Note', isSelected: _groupValue == 2),
       },
       onValueChanged: (groupValue) {
         setState(() => _groupValue = groupValue!);
@@ -165,9 +165,9 @@ class __BloodPressurePageState extends State<_BloodPressurePage> {
     return SingleChildScrollView(
       child: Column(
         children: [
-          _buildSectionTitle('Sinh hiệu'),
-          _buildMetric('Huyết áp', '80 - 110 mmHg'),
-          _buildDualMetric('Nhịp tim', '90 BPM', 'Đường huyết', '140 mg/dL'),
+          _buildSectionTitle('Vitals'),
+          _buildMetric('Blood Pressure', '80 - 110 mmHg'),
+          _buildDualMetric('Heart rate', '90 BPM', 'Blood sugar', '140 mg/dL'),
           const SizedBox(height: 15),
           _buildDiagnosis(),
         ],
@@ -307,11 +307,11 @@ class __BloodPressurePageState extends State<_BloodPressurePage> {
   Widget _buildDiagnosis() {
     return Column(
       children: [
-        _buildSectionTitle('Chuẩn đoán từ bác sĩ'),
+        _buildSectionTitle('Doctor\'s diagnostic'),
         Container(
           margin: const EdgeInsets.only(top: 10),
           width: double.infinity,
-          padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 8),
+          padding: const EdgeInsets.all(16),
           decoration: BoxDecoration(
             color: ColorStyles.silver,
             borderRadius: BorderRadius.circular(9.68),
@@ -320,16 +320,16 @@ class __BloodPressurePageState extends State<_BloodPressurePage> {
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              BulletText(text: 'Huyết áp ổn định'),
-              BulletText(text: 'Nhịp tim ổn định'),
-              BulletText(text: 'Đường huyết ổn định'),
+              BulletText(text: 'Blood pressure stable\n'),
+              BulletText(text: 'Heart rate stable\n'),
+              BulletText(text: 'Blood sugar stable'),
             ],
           ),
         ),
         const SizedBox(height: 15),
         Row(
           children: [
-            _buildSectionTitle('Đơn thuốc'),
+            _buildSectionTitle('Prescription'),
             const Spacer(),
             Container(
               padding: const EdgeInsets.all(8),
@@ -346,7 +346,7 @@ class __BloodPressurePageState extends State<_BloodPressurePage> {
                   ),
                   SizedBox(width: 4), // Khoảng cách giữa biểu tượng và văn bản
                   Text(
-                    'Đơn gần đây nhất',
+                    'Most recent',
                     style: TextStyle(
                       fontFamily: 'Roboto',
                       fontSize: 16,
@@ -361,10 +361,10 @@ class __BloodPressurePageState extends State<_BloodPressurePage> {
         ),
         const SizedBox(height: 10),
         _buildMedicineInfo(
-          name: 'Thuốc viên nén',
+          name: 'Tablet',
           description: 'Paracetamol',
-          dosage: '1 viên x 3 lần/ngày',
-          instructions: 'Dùng với nước',
+          dosage: '2 tablets - twice a day (10mg)',
+          instructions: 'With water',
         ),
         const SizedBox(height: 15), // Khoảng cách giữa các container],
       ],
@@ -467,10 +467,10 @@ class __BloodPressurePageState extends State<_BloodPressurePage> {
   Widget _testingView() {
     return Column(
       children: [
-        _buildSectionTitle('Xét nghiệm máu'),
+        _buildSectionTitle('Blood test'),
         _resultInformationTesting(),
         const SizedBox(height: 15),
-        _buildSectionTitle('Xét nghiệm mỡ máu'),
+        _buildSectionTitle('Cholesterol test'),
         _resultInformationCustomTesting(
           'Triglyceride', '150 mg/dL', // Thay đổi giá trị kết quả
         ),
@@ -496,7 +496,7 @@ class __BloodPressurePageState extends State<_BloodPressurePage> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+                'Be mindful of any sudden changes in your blood pressure readings or any symptoms such as severe headaches, dizziness, chest pain, or shortness of breath. If you experience any of these symptoms, don\'t hesitate to reach out to me so we can address them promptly.',
                 style: TextStyle(
                   fontFamily: 'Roboto',
                   fontSize: 18,
@@ -505,12 +505,6 @@ class __BloodPressurePageState extends State<_BloodPressurePage> {
                   height: 1.2,
                 ),
               ),
-              SizedBox(height: 10),
-              BulletText(text: 'Huyết áp ổn định'),
-              SizedBox(height: 5),
-              BulletText(text: 'Nhịp tim ổn định'),
-              SizedBox(height: 5),
-              BulletText(text: 'Đường huyết ổn định'),
             ],
           ),
         ),
@@ -529,11 +523,11 @@ class __BloodPressurePageState extends State<_BloodPressurePage> {
       ),
       child: Column(
         children: [
-          _buildResultRow('Ure Máu', '80 mg/Dl'),
+          _buildResultRow('Blood Urea', '80 mg/Dl'),
           const SizedBox(height: 14),
-          _buildResultRow('Acid uric máu', '80 mg/Dl'),
+          _buildResultRow('Blood Uric Acid', '80 mg/Dl'),
           const SizedBox(height: 14),
-          _buildResultRow('Creatinin máu', '80 mg/Dl'),
+          _buildResultRow('Blood Creatinine', '80 mg/Dl'),
           const SizedBox(height: 14),
           _seeMoreButton(),
         ],
@@ -618,7 +612,7 @@ class __BloodPressurePageState extends State<_BloodPressurePage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  'Xem chi tiết',
+                  'More detail',
                   style: TextStyle(
                     fontFamily: 'Roboto',
                     fontSize: 17,

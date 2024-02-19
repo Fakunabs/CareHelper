@@ -36,11 +36,11 @@ class _HomeView extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  GreetingsWidget(name: 'Sample name'),
+                  GreetingsWidget(name: 'Arthur Smith'),
                   SizedBox(height: 30),
                   NewSurveyWidget(),
-                  SizedBox(height: 16),
-                  ProfileIncompleteWidget(),
+                  // SizedBox(height: 16),
+                  // ProfileIncompleteWidget(),
                   SizedBox(height: 30),
                   DiagnosticWidget(),
                   SizedBox(height: 30),

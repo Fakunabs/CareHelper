@@ -1,0 +1,1 @@
+ /Users/quantumcat/Documents/CareHelper/.dart_tool/flutter_build/07ecdf6a0f082c2dc0514cfcafc7241b/native_assets.yaml: 

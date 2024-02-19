@@ -115,7 +115,7 @@ class _MedicalHistoryView extends StatelessWidget {
                         width: 8,
                       ), // Khoảng cách giữa biểu tượng và văn bản
                       Text(
-                        'Lần gần nhất',
+                        'Most recent',
                         style: TextStyle(
                           fontFamily: 'Roboto',
                           fontSize: 13,
@@ -198,21 +198,20 @@ class _MedicalHistoryView extends StatelessWidget {
             itemBuilder: (context, index) {
               switch (index) {
                 case 0:
-                  return _checkListhHeader('Lịch sử lần khám');
+                  return _checkListhHeader('History');
                 case 1:
                   return _theLatestCheckList(
                     context, // Add context parameter here
-                    'Huyết áp ổn định',
-                    '01/01/2024',
+                    'Stable',
+                    '05/01/2024',
                   );
                 case 2:
                   // Tạo một danh sách giả lập 5 lịch sử khám
                   final List<Map<String, String>> histories = [
-                    {'content': 'Huyết áp ổn định', 'date': '01/01/2024'},
-                    {'content': 'Huyết áp ổn định', 'date': '02/01/2024'},
-                    {'content': 'Huyết áp ổn định', 'date': '03/01/2024'},
-                    {'content': 'Huyết áp ổn định', 'date': '04/01/2024'},
-                    {'content': 'Huyết áp ổn định', 'date': '05/01/2024'},
+                    {'content': 'Blood pressure stable', 'date': '14/12/2023'},
+                    {'content': 'Blood pressure stable', 'date': '17/11/2023'},
+                    {'content': 'Blood pressure stable', 'date': '24/10/2023'},
+                    {'content': 'Blood pressure stable', 'date': '05/09/2023'},
                   ];
                   return Column(
                     children: histories.map((history) {

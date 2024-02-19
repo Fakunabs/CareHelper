@@ -22,7 +22,7 @@ class _TestDetailPageState extends State<TestDetailPage> {
       ),
       body: Column(
         children: [
-          _buildSectionTitle('Chi tiết xét nghiệm'),
+          _buildSectionTitle('Test details'),
           _buildTestDetailItem(),
         ],
       ),
@@ -62,63 +62,36 @@ class _TestDetailPageState extends State<TestDetailPage> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           buildTestDetailRow(
-            firstText: 'Thông số',
-            secondText: 'Chỉ số',
-            thirdText: 'Đơn vị',
+            firstText: 'Metric',
+            secondText: 'Index',
+            thirdText: 'Unit',
           ),
           const Divider(
             color: Colors.black,
             thickness: 1,
           ),
           resultTestDetailRow(
-            firstText: 'Nhịp tim',
-            secondText: '120',
-            thirdText: 'BPM',
+            firstText: 'Blood Urea',
+            secondText: '80',
+            thirdText: 'mg/Dl',
           ),
           const Divider(
             color: Colors.white,
             thickness: 1,
           ),
           resultTestDetailRow(
-            firstText: 'Nhịp tim',
-            secondText: '120',
-            thirdText: 'BPM',
+            firstText: 'Blood Uric Acid',
+            secondText: '80',
+            thirdText: 'mg/Dl',
           ),
           const Divider(
             color: Colors.white,
             thickness: 1,
           ),
           resultTestDetailRow(
-            firstText: 'Nhịp tim',
-            secondText: '120',
-            thirdText: 'BPM',
-          ),
-          const Divider(
-            color: Colors.white,
-            thickness: 1,
-          ),
-          resultTestDetailRow(
-            firstText: 'Nhịp tim',
-            secondText: '120',
-            thirdText: 'BPM',
-          ),
-          const Divider(
-            color: Colors.white,
-            thickness: 1,
-          ),
-          resultTestDetailRow(
-            firstText: 'Nhịp tim',
-            secondText: '120',
-            thirdText: 'BPM',
-          ),
-          const Divider(
-            color: Colors.white,
-            thickness: 1,
-          ),
-          resultTestDetailRow(
-            firstText: 'Nhịp tim',
-            secondText: '120',
-            thirdText: 'BPM',
+            firstText: 'Blood Creatinine',
+            secondText: '80',
+            thirdText: 'mg/Dl',
           ),
           const Divider(
             color: Colors.white,
