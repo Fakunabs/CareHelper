@@ -58,8 +58,8 @@ class _PinAuthenViewState extends State<PinAuthenView> {
       body: Column(
         children: [
           HeaderPhoneInputWidget(
-            heading1: 'Xac thuc',
-            heading2: '6 chu so da duoc gui den ${widget.phoneNumber}',
+            heading1: 'Confirmination',
+            heading2: '6 digits have been sent ${widget.phoneNumber}',
           ),
           const SizedBox(height: 24),
           Form(
@@ -159,7 +159,7 @@ class _PinAuthenViewState extends State<PinAuthenView> {
                 Container(
                   margin: const EdgeInsets.only(left: 16, right: 16),
                   child: CustomButtonWidget(
-                    label: 'Tiep tuc',
+                    label: 'Continue',
                     onPressed: () {
                       focusNode.unfocus();
                       formKey.currentState!.validate()

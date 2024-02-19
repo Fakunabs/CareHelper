@@ -68,13 +68,15 @@ class WelcomePage extends StatelessWidget {
                       borderRadius: BorderRadius.circular(8),
                     ),
                   ),
-                  onPressed: () => {},
+                  onPressed: () => {
+                    Navigator.of(context).pushNamed(AppRouter.register),
+                  },
                   child: Container(
                     margin: const EdgeInsets.all(24),
                     width: double.infinity,
                     alignment: Alignment.center,
                     child: const Text(
-                      'Đăng ký',
+                      'Sign Up',
                       style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
@@ -99,7 +101,7 @@ class WelcomePage extends StatelessWidget {
                     width: double.infinity,
                     alignment: Alignment.center,
                     child: const Text(
-                      'Đăng nhập',
+                      'Sign In',
                       style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,

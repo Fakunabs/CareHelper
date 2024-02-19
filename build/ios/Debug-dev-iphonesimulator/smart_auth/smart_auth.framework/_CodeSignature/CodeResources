@@ -10,7 +10,7 @@
 		</data>
 		<key>Headers/smart_auth-Swift.h</key>
 		<data>
-		MU5s8mEnZoWjGhC8jBg46zTy+JM=
+		mCQFlbm1u+XVTvoU3HduOxFjn0Y=
 		</data>
 		<key>Headers/smart_auth-umbrella.h</key>
 		<data>
@@ -18,7 +18,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		PCTElQMaw3IuAmitpTwAuAYo5Xw=
+		uQD7hHWFkrzUFAuS26FiuFzNma8=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -26,11 +26,11 @@
 		</data>
 		<key>Modules/smart_auth.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		oBpsNo0qLB6bNb8wdNyt4efZ6EE=
+		BT4JVSE/2RZowGcmmzfBVZXZucM=
 		</data>
 		<key>Modules/smart_auth.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		y/61NlWd7e8kAJBvQN6eQfAQc3M=
+		HKnTZvwGyhjFpE2iqP0Yv6hIePM=
 		</data>
 		<key>Modules/smart_auth.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -38,11 +38,11 @@
 		</data>
 		<key>Modules/smart_auth.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		inI5ziCe5ahHPtUpJ8F8lN1ocXY=
+		ewiGG8Twbdc21LAvfLc+EpZk2pI=
 		</data>
 		<key>Modules/smart_auth.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		enwsQFsueR+QxqDLEbtHpU8dNb8=
+		7S3YNKgvoS+aoE1o1gkEQLv/4vk=
 		</data>
 		<key>Modules/smart_auth.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -50,11 +50,11 @@
 		</data>
 		<key>Modules/smart_auth.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		SplXXL4RaM+1c9YVkPCYjHrgpJ4=
+		ZuUfYDBUIDPO7I+z/RdcnQEBVWw=
 		</data>
 		<key>Modules/smart_auth.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		0+tTNpW+9wnyquFUJ8mdYxYYZJ8=
+		N0RXbqW4Xt9qJIik6Y9iWTTkPKM=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -70,7 +70,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			L9bcgeWcuKmQhfFFuY+eOXnKbgRdwDTmG/6uUo6Ngdk=
+			Hk2tY0HFdqKLLLW35QO/rqWJncIZp2VETAW4fp6fzGM=
 			</data>
 		</dict>
 		<key>Headers/smart_auth-umbrella.h</key>
@@ -91,14 +91,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			TX9fU8FiMSVgrsYkZEesidWZ+dJUCttbE9C/+sPdAIY=
+			ZI8ea4MIzJJioDSSfDp6pduUPM+G42YP7xqxcwhxCX0=
 			</data>
 		</dict>
 		<key>Modules/smart_auth.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			95CzBy6TOqvVXM8bvKNJRWYblKXkp0MBflb4vfqVkxw=
+			0o7+M/0vrjdL1Qo/0HoKElsEMt1h2EX4QAUQn8I9Bs0=
 			</data>
 		</dict>
 		<key>Modules/smart_auth.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
@@ -112,14 +112,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			457X8dF1zz2yw8aizkzkkvrdIeP44i/SFmGHmGYNNMI=
+			fgZQzP3BUvzohBy6FdkCmfMDGd8vFoM1tJVxi8kUTQU=
 			</data>
 		</dict>
 		<key>Modules/smart_auth.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Z0o/YhmrYGrkgAsFoKW0O5MuHKhaOe5xY7Ig/W8auAU=
+			8GxlfhVfZLCkrNp82tI0PcTLQaNWnRAwIyZodFMeh+s=
 			</data>
 		</dict>
 		<key>Modules/smart_auth.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
@@ -133,14 +133,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			bOYRSyV/JZ2MAOEl1XSNMAzGbDIZqm/jSMCnt9/pFj0=
+			rX7LHTj0arVzaGiAIFXekf8uPnzSraan2uaso/+/O5Y=
 			</data>
 		</dict>
 		<key>Modules/smart_auth.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			aDAl6kG8jvHL9yWP8s5WiXnbdy7Q5XWWSm/GS9OsZbs=
+			7oqgFyHjWLjORAWEg7Fo/okVtc1lX4BrxSVFJLqJv6U=
 			</data>
 		</dict>
 	</dict>

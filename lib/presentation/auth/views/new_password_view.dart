@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_template/presentation/auth/widgets/custom_button_widget.dart';
 import 'package:flutter_template/presentation/auth/widgets/header_phone_input_widget.dart';
+import 'package:flutter_template/router/app_router.dart';
 
 class NewPasswordView extends StatefulWidget {
   const NewPasswordView({super.key});
@@ -104,8 +105,13 @@ class _NewPasswordScreenState extends State<NewPasswordView> {
           Container(
             margin: const EdgeInsets.only(left: 16, right: 16),
             child: CustomButtonWidget(
-              label: 'Tiep tuc',
-              onPressed: () {},
+              label: 'Continue',
+              onPressed: () {
+                Navigator.of(context).pushNamedAndRemoveUntil(
+                  AppRouter.login,
+                  (route) => false,
+                );
+              },
             ),
           ),
         ],

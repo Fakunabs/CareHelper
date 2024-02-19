@@ -54,7 +54,11 @@ abstract class ColorStyles {
   // Icon color
   static const Color lightIconColor = Color(0xFF000118);
   static const Color darkIconColor = Colors.white;
-  
+
+  //
+  static const Color primaryColor = Color(0xff112950);
+  static const Color secondaryColor = Colors.blueAccent;
+
   // New color
   static const Color mineShaft = Color(0xFF272727);
   static const Color dodgerBlue = Color(0xFF3274D4);
@@ -68,4 +72,8 @@ abstract class ColorStyles {
   static const Color grey2 = Color(0xFF545454);
   static const Color grey3 = Color(0xFF939393);
   static const Color grey4 = Color(0xFFBABABA);
+
+  static const Color darkColorButton = Color(0xFF3A3A3A);
+  static const Color categoryButtonColor = Color(0xFF5D7EB2);
+  static const Color textFormFieldColor = Colors.white;
 }
