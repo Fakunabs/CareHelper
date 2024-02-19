@@ -1,0 +1,231 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_template/common/theme/color_styles.dart';
+import 'package:flutter_template/presentation/notification/bloc/medical_history_bloc.dart';
+import 'package:flutter_template/presentation/widgets/common_app_bar.dart';
+
+class TestDetailPage extends StatefulWidget {
+  const TestDetailPage({super.key});
+
+  @override
+  _TestDetailPageState createState() => _TestDetailPageState();
+}
+
+class _TestDetailPageState extends State<TestDetailPage> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: const CommonAppBar(
+        title: 'Test Details',
+        hasBoxDecoration: false,
+      ),
+      body: Column(
+        children: [
+          _buildSectionTitle('Chi tiết xét nghiệm'),
+          _buildTestDetailItem(),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildSectionTitle(String title) {
+    return Padding(
+      padding: const EdgeInsets.all(20.0),
+      child: Row(
+        children: [
+          Text(
+            title,
+            style: const TextStyle(
+              fontSize: 23,
+              fontFamily: 'Roboto',
+              fontWeight: FontWeight.w600,
+              color: Colors.black,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildTestDetailItem() {
+    return Container(
+      margin: const EdgeInsets.only(left: 12, right: 12),
+      width: double.infinity,
+      padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 20),
+      decoration: BoxDecoration(
+        color: ColorStyles.grey3,
+        borderRadius: BorderRadius.circular(9.68),
+      ),
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          buildTestDetailRow(
+            firstText: 'Thông số',
+            secondText: 'Chỉ số',
+            thirdText: 'Đơn vị',
+          ),
+          const Divider(
+            color: Colors.black,
+            thickness: 1,
+          ),
+          resultTestDetailRow(
+            firstText: 'Nhịp tim',
+            secondText: '120',
+            thirdText: 'BPM',
+          ),
+          const Divider(
+            color: Colors.white,
+            thickness: 1,
+          ),
+          resultTestDetailRow(
+            firstText: 'Nhịp tim',
+            secondText: '120',
+            thirdText: 'BPM',
+          ),
+          const Divider(
+            color: Colors.white,
+            thickness: 1,
+          ),
+          resultTestDetailRow(
+            firstText: 'Nhịp tim',
+            secondText: '120',
+            thirdText: 'BPM',
+          ),
+          const Divider(
+            color: Colors.white,
+            thickness: 1,
+          ),
+          resultTestDetailRow(
+            firstText: 'Nhịp tim',
+            secondText: '120',
+            thirdText: 'BPM',
+          ),
+          const Divider(
+            color: Colors.white,
+            thickness: 1,
+          ),
+          resultTestDetailRow(
+            firstText: 'Nhịp tim',
+            secondText: '120',
+            thirdText: 'BPM',
+          ),
+          const Divider(
+            color: Colors.white,
+            thickness: 1,
+          ),
+          resultTestDetailRow(
+            firstText: 'Nhịp tim',
+            secondText: '120',
+            thirdText: 'BPM',
+          ),
+          const Divider(
+            color: Colors.white,
+            thickness: 1,
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget buildTestDetailRow({
+    required String firstText,
+    required String secondText,
+    required String thirdText,
+  }) {
+    return Column(
+      children: [
+        const SizedBox(height: 10),
+        Row(
+          children: [
+            Text(
+              firstText,
+              style: const TextStyle(
+                fontFamily: 'Roboto',
+                fontSize: 18,
+                fontWeight: FontWeight.w400,
+                color: Colors.white,
+                height: 1.2,
+              ),
+            ),
+            const Spacer(),
+            Text(
+              secondText,
+              style: const TextStyle(
+                fontFamily: 'Roboto',
+                fontSize: 18,
+                fontWeight: FontWeight.w400,
+                color: Colors.white,
+                height: 1.2,
+              ),
+            ),
+            const Spacer(),
+            Text(
+              thirdText,
+              style: const TextStyle(
+                fontFamily: 'Roboto',
+                fontSize: 18,
+                fontWeight: FontWeight.w400,
+                color: Colors.white,
+                height: 1.2,
+              ),
+            ),
+            const SizedBox(width: 40),
+          ],
+        ),
+        const SizedBox(height: 10),
+      ],
+    );
+  }
+
+  Widget resultTestDetailRow({
+    required String firstText,
+    required String secondText,
+    required String thirdText,
+  }) {
+    return Column(
+      children: [
+        const SizedBox(height: 10),
+        Row(
+          children: [
+            Text(
+              firstText,
+              style: const TextStyle(
+                fontFamily: 'Roboto',
+                fontSize: 18,
+                fontWeight: FontWeight.w400,
+                color: Colors.black,
+                height: 1.2,
+              ),
+            ),
+            const Spacer(),
+            Text(
+              secondText,
+              style: const TextStyle(
+                fontFamily: 'Roboto',
+                fontSize: 18,
+                fontWeight: FontWeight.w400,
+                color: Colors.black,
+                height: 1.2,
+              ),
+            ),
+            const Spacer(),
+            Text(
+              thirdText,
+              style: const TextStyle(
+                fontFamily: 'Roboto',
+                fontSize: 18,
+                fontWeight: FontWeight.w400,
+                color: Colors.black,
+                height: 1.2,
+              ),
+            ),
+            const SizedBox(width: 50),
+          ],
+        ),
+        const SizedBox(height: 10),
+      ],
+    );
+  }
+}
