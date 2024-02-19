@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.example.flutter_template.app-mergeDevDebugResources-38:/values-port/values-port.xml",
+            "map": [
+                {
+                    "source": "/Users/truongminhman/.gradle/caches/transforms-3/c2b17b2056ce04e091b2c176e6f49602/transformed/appcompat-1.2.0/res/values-port/values-port.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "55",
+                        "endOffsets": "106"
+                    }
+                }
+            ]
+        }
+    ]
+}

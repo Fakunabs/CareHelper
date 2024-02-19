@@ -19,13 +19,11 @@ class CustomButton extends StatelessWidget {
   final Color? color;
   final Function()? onPressed;
 
-  static const Color defaultColor = ColorStyles.darkColorButton;
-
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
-        backgroundColor: color ?? defaultColor,
+        backgroundColor: color,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(8),
         ),

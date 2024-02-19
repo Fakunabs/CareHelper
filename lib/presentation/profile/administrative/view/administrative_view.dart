@@ -2,6 +2,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_template/common/theme/color_styles.dart';
 import 'package:flutter_template/generated/locale_keys.g.dart';
+import 'package:flutter_template/presentation/profile/administrative/widgets/administrative_textformfield.dart';
 
 class AdministrativeView extends StatelessWidget {
   const AdministrativeView({super.key});
@@ -17,151 +18,79 @@ class MyView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 600,
-      child: Form(
-        child: Column(
-          children: [
-            TextFormField(
-              style: const TextStyle(
-                color: ColorStyles.textFormFieldColor,
-              ),
-              decoration: const InputDecoration(
-                labelText: 'dábhkdsabkdhsabdkhjsa',
-                hintText: 'Enter your name',
-                labelStyle: TextStyle(
-                  color: Colors.white,
+    return const SizedBox(
+      height: 650,
+      child: Column(
+        children: [
+          AdministrativeTextFormField(
+            labelText: 'Name',
+            hintText: 'Enter your name',
+            initialValue: 'Arthur Smith',
+          ),
+          Row(
+            children: [
+              Expanded(
+                child: AdministrativeTextFormField(
+                  labelText: 'Date of birth',
+                  hintText: 'Enter your date of birth',
+                  initialValue: '01/01/1990',
                 ),
               ),
-            ),
-            Row(
-              children: [
-                Expanded(
-                  child: TextFormField(
-                    style: const TextStyle(
-                      color: ColorStyles.textFormFieldColor,
-                    ),
-                    decoration: const InputDecoration(
-                      labelText: 'dábdsabdhjsahdasdbhaks',
-                      hintText: 'Enter your date of birth',
-                      labelStyle: TextStyle(
-                        color: Colors.white,
-                      ),
-                    ),
-                  ),
-                ),
-                const SizedBox(width: 4),
-                Expanded(
-                  child: TextFormField(
-                    style: const TextStyle(
-                      color: ColorStyles.textFormFieldColor,
-                    ),
-                    decoration: const InputDecoration(
-                      labelText: 'đấnkdsadas',
-                      hintText: 'Enter your sex',
-                      labelStyle: TextStyle(
-                        color: Colors.white,
-                      ),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-            TextFormField(
-              style: const TextStyle(
-                color: ColorStyles.textFormFieldColor,
-              ),
-              decoration: const InputDecoration(
-                labelText: 'sua cho nay',
-                hintText: 'Enter your citizen id',
-                labelStyle: TextStyle(
-                  color: Colors.white,
+              SizedBox(width: 4),
+              Expanded(
+                child: AdministrativeTextFormField(
+                  labelText: 'Gender',
+                  hintText: 'Enter your gender',
+                  initialValue: 'MALE',
                 ),
               ),
-            ),
-            TextFormField(
-              style: const TextStyle(
-                color: ColorStyles.textFormFieldColor,
-              ),
-              decoration: const InputDecoration(
-                labelText: 'adsadbhjsadas',
-                hintText: 'Enter your insurance id',
-                labelStyle: TextStyle(
-                  color: Colors.white,
+            ],
+          ),
+          AdministrativeTextFormField(
+            labelText: 'Citizen ID',
+            hintText: 'Enter your citizen id',
+            initialValue: '1234567890',
+          ),
+          AdministrativeTextFormField(
+            labelText: 'Medical insurance ID',
+            hintText: 'Enter your insurance id',
+            initialValue: '0123456789',
+          ),
+          AdministrativeTextFormField(
+            labelText: 'Address',
+            hintText: 'Enter your address',
+            initialValue: '123 Main Street, New York, NY 10030',
+          ),
+          AdministrativeTextFormField(
+            labelText: 'Occupation',
+            hintText: 'Enter your occupation',
+            initialValue: 'Software Engineer',
+          ),
+          Row(
+            children: [
+              Expanded(
+                child: AdministrativeTextFormField(
+                  labelText: 'Height',
+                  hintText: 'Enter your height',
+                  initialValue: '180',
                 ),
               ),
-            ),
-            TextFormField(
-              style: const TextStyle(
-                color: ColorStyles.textFormFieldColor,
-              ),
-              decoration: const InputDecoration(
-                labelText: 'dsadasdsadsadas',
-                hintText: 'Enter your address',
-                labelStyle: TextStyle(
-                  color: Colors.white,
+              SizedBox(width: 4),
+              Expanded(
+                child: AdministrativeTextFormField(
+                  labelText: 'Weight',
+                  hintText: 'Enter your weight',
+                  initialValue: '80',
                 ),
               ),
-            ),
-            TextFormField(
-              style: const TextStyle(
-                color: ColorStyles.textFormFieldColor,
-              ),
-              decoration: const InputDecoration(
-                labelText: 'sdsdsadasdas',
-                hintText: 'Enter your occupation',
-                labelStyle: TextStyle(
-                  color: Colors.white,
-                ),
-              ),
-            ),
-            Row(
-              children: [
-                Expanded(
-                  child: TextFormField(
-                    style: const TextStyle(
-                      color: ColorStyles.textFormFieldColor,
-                    ),
-                    decoration: const InputDecoration(
-                      labelText: 'dsadasdas',
-                      hintText: 'Enter your height',
-                      labelStyle: TextStyle(
-                        color: Colors.white,
-                      ),
-                    ),
-                  ),
-                ),
-                const SizedBox(width: 4),
-                Expanded(
-                  child: TextFormField(
-                    style: const TextStyle(
-                      color: ColorStyles.textFormFieldColor,
-                    ),
-                    decoration: const InputDecoration(
-                      labelText: 'sadasdasdas',
-                      hintText: 'Enter your weight',
-                      labelStyle: TextStyle(
-                        color: Colors.white,
-                      ),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-            TextFormField(
-              style: const TextStyle(
-                color: ColorStyles.textFormFieldColor,
-              ),
-              decoration: const InputDecoration(
-                labelText: 'ádsadsasa',
-                hintText: 'Enter your recent check up',
-                labelStyle: TextStyle(
-                  color: Colors.white,
-                ),
-              ),
-            ),
-          ],
-        ),
+            ],
+          ),
+          AdministrativeTextFormField(
+            labelText: 'Recent check up',
+            hintText: 'Enter your recent check up',
+            initialValue: '01/01/2021',
+          ),
+        ],
       ),
     );
   }

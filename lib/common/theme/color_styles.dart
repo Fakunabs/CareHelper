@@ -76,4 +76,6 @@ abstract class ColorStyles {
   static const Color darkColorButton = Color(0xFF3A3A3A);
   static const Color categoryButtonColor = Color(0xFF5D7EB2);
   static const Color textFormFieldColor = Colors.white;
+  static const Color textFormBackgroundColor = Color(0xFFC4C4C4);
+  static const Color updateMedicalHistoryBackgroundColor = Color(0xFFD9D9D9);
 }

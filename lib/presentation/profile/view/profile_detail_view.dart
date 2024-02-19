@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_template/common/theme/color_styles.dart';
 import 'package:flutter_template/generated/locale_keys.g.dart';
 import 'package:flutter_template/presentation/profile/administrative/view/administrative_view.dart';
+import 'package:flutter_template/presentation/profile/medical_history/view/medical_history_view.dart';
+import 'package:flutter_template/presentation/profile/profile.dart';
 import 'package:flutter_template/presentation/profile/widgets/custom_button.dart';
 import 'package:flutter_template/presentation/profile/widgets/custom_category.dart';
 
@@ -25,12 +27,7 @@ class _ProfileDetailViewState extends State<ProfileDetailView> {
       body: Container(
         width: double.infinity,
         decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            colors: [
-              ColorStyles.primaryColor,
-              ColorStyles.secondaryColor,
-            ],
-          ),
+          color: ColorStyles.background,
         ),
         child: Container(
           padding: const EdgeInsets.all(16),
@@ -50,11 +47,11 @@ class _ProfileDetailViewState extends State<ProfileDetailView> {
                             groupValue: selectedView,
                             children: const {
                               0: CustomCategory(
-                                text: 'aaaaaaaaaaa',
+                                text: 'Administrative',
                                 fontSize: 16,
                               ),
                               1: CustomCategory(
-                                text: 'bbbbb',
+                                text: 'Medical history',
                                 fontSize: 16,
                               ),
                             },
@@ -76,30 +73,48 @@ class _ProfileDetailViewState extends State<ProfileDetailView> {
                     ? const SingleChildScrollView(
                         child: AdministrativeView(),
                       )
-                    : const Text('a'),
+                    : const MedicalHistoryView(),
               ),
-              const Expanded(
+              Expanded(
                 child: Stack(
                   children: [
                     Positioned.fill(
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
-                          Expanded(
-                            child: CustomButton(
-                              text: 'đâsdasdsa',
+                          Container(
+                            decoration: const BoxDecoration(
+                              color: ColorStyles.categoryButtonColor,
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(8)),
+                            ),
+                            child: const CustomButton(
+                              text: 'Save',
                               width: double.infinity,
                               height: 50,
                               textSize: 16,
                             ),
                           ),
-                          SizedBox(height: 8),
-                          Expanded(
+                          const SizedBox(height: 8),
+                          Container(
+                            decoration: const BoxDecoration(
+                              color: ColorStyles.categoryButtonColor,
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(8)),
+                            ),
                             child: CustomButton(
-                              text: 'đâsdsa',
+                              text: 'Back to home',
                               width: double.infinity,
                               height: 50,
                               textSize: 16,
+                              onPressed: () {
+                                Navigator.of(context).push(
+                                  MaterialPageRoute(
+                                    builder: (_) => const ProfilePage(),
+                                  ),
+                                );
+                              },
+                              color: ColorStyles.categoryButtonColor,
                             ),
                           ),
                         ],

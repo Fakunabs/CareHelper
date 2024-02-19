@@ -1,0 +1,13 @@
+#Tue Feb 20 01:30:40 ICT 2024
+path.3=classes3.dex
+path.2=classes2.dex
+path.1=classes1000.dex
+path.0=classes.dex
+base.3=/Volumes/Seagate/seagate_temp/CODE_GDSC/care-helper-test/CareHelper/build/app/intermediates/dex/devDebug/mergeDexDevDebug/classes3.dex
+base.2=/Volumes/Seagate/seagate_temp/CODE_GDSC/care-helper-test/CareHelper/build/app/intermediates/dex/devDebug/mergeDexDevDebug/classes2.dex
+base.1=/Volumes/Seagate/seagate_temp/CODE_GDSC/care-helper-test/CareHelper/build/app/intermediates/desugar_lib_dex/devDebug/classes1000.dex
+base.0=/Volumes/Seagate/seagate_temp/CODE_GDSC/care-helper-test/CareHelper/build/app/intermediates/dex/devDebug/mergeDexDevDebug/classes.dex
+renamed.3=classes4.dex
+renamed.2=classes3.dex
+renamed.1=classes2.dex
+renamed.0=classes.dex

@@ -15,7 +15,7 @@ class ProfileNav1View extends StatefulWidget {
 
 class _ProfileNav1ViewState extends State<ProfileNav1View> {
   Widget customedWidget = const Text(
-    'aaaaa',
+    'Administrative information and Medical history',
     style: TextStyle(
       color: Colors.white,
       fontSize: 20,
@@ -46,7 +46,7 @@ class _ProfileNav1ViewState extends State<ProfileNav1View> {
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     CustomButton(
-                      text: 'sssqqqqqq',
+                      text: 'Medical records',
                       width: double.infinity,
                       height: 150,
                       textSize: 20,
@@ -65,7 +65,7 @@ class _ProfileNav1ViewState extends State<ProfileNav1View> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               CustomButton(
-                                text: 'adsadasdasdasdasdasdasdaa',
+                                text: 'View',
                                 width: double.infinity,
                                 height: 50,
                                 textSize: 16,
@@ -77,7 +77,7 @@ class _ProfileNav1ViewState extends State<ProfileNav1View> {
                               ),
                               const SizedBox(height: 16),
                               CustomButton(
-                                text: 'ssssss',
+                                text: 'Update',
                                 width: double.infinity,
                                 height: 50,
                                 textSize: 16,
@@ -103,7 +103,7 @@ class _ProfileNav1ViewState extends State<ProfileNav1View> {
                   Container(
                     margin: const EdgeInsets.all(16),
                     child: CustomButton(
-                      text: 'ádsadasdas',
+                      text: 'Back to home',
                       width: double.infinity,
                       height: 50,
                       textSize: 16,

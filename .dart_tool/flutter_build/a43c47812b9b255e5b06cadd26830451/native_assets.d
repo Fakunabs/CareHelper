@@ -1,0 +1,1 @@
+ /Volumes/Seagate/seagate_temp/CODE_GDSC/care-helper-test/CareHelper/.dart_tool/flutter_build/a43c47812b9b255e5b06cadd26830451/native_assets.yaml: 

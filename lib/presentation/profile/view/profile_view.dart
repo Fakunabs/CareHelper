@@ -78,7 +78,7 @@ class _ProfileView extends StatelessWidget {
                       Container(
                         margin: const EdgeInsets.all(16),
                         child: CustomButton(
-                          text: 'qqqqqqqqq',
+                          text: 'Medical records',
                           width: double.infinity,
                           height: 50,
                           textSize: 16,

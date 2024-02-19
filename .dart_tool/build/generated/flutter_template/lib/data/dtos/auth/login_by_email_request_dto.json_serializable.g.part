@@ -1,0 +1,10 @@
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+Map<String, dynamic> _$LoginByEmailRequestDTOToJson(
+        LoginByEmailRequestDTO instance) =>
+    <String, dynamic>{
+      'email': instance.email,
+      'password': instance.password,
+    };
