@@ -1,7 +1,0 @@
-// **************************************************************************
-// JsonSerializableGenerator
-// **************************************************************************
-
-UserModel _$UserModelFromJson(Map<String, dynamic> json) => UserModel(
-      email: json['email'] as String,
-    );
