@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_template/common/theme/custom_color.dart';
+import 'package:flutter_template/presentation/survey/view/survey_view.dart';
 
 class NewSurveyWidget extends StatelessWidget {
   const NewSurveyWidget({super.key});
@@ -30,7 +31,12 @@ class NewSurveyWidget extends StatelessWidget {
               width: 16,
             ),
             IconButton.filled(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const SurveyView()),
+                );
+              },
               icon: const Icon(Icons.navigate_next_sharp),
             )
           ],
