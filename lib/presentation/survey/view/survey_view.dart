@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_template/presentation/survey/widgets/survey_body_widget.dart';
 import 'package:flutter_template/presentation/survey/widgets/survey_metadata_widget.dart';
+import 'package:flutter_template/presentation/widgets/common_app_bar.dart';
 
 class SurveyView extends StatelessWidget {
   const SurveyView({super.key});
@@ -8,9 +9,10 @@ class SurveyView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
+      appBar: CommonAppBar(
         backgroundColor: Theme.of(context).scaffoldBackgroundColor,
         title: const Text('New Medical Survery'),
+        hasBoxDecoration: false,
       ),
       body: const SafeArea(
         child: SingleChildScrollView(
@@ -26,7 +28,7 @@ class SurveyView extends StatelessWidget {
                 SizedBox(
                   height: 30,
                 ),
-                SurveyBodyWidget()
+                SurveyBodyWidget(),
               ],
             ),
           ),

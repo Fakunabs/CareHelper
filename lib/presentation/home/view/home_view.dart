@@ -8,7 +8,7 @@ import 'package:flutter_template/presentation/home/widgets/diagnostic/diagnostic
 import 'package:flutter_template/presentation/home/widgets/greetings/greetings_widget.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
-import '../widgets/prescription/prescription_widget.dart';
+import 'package:flutter_template/presentation/home/widgets/prescription/prescription_widget.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -32,7 +32,7 @@ class _HomeView extends StatelessWidget {
         return const Scaffold(
           body: SafeArea(
             child: SingleChildScrollView(
-              padding: EdgeInsets.fromLTRB(20, 28, 20, 100),
+              padding: EdgeInsets.fromLTRB(20, 28, 20, 20),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [

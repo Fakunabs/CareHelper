@@ -482,7 +482,7 @@ class __BloodPressurePageState extends State<_BloodPressurePage> {
     return Column(
       children: [
         const SizedBox(height: 10),
-        _buildSectionTitle('Ghi chú lần khám'),
+        _buildSectionTitle('Medical examination notes'),
         Container(
           margin: const EdgeInsets.only(top: 10),
           width: double.infinity,
