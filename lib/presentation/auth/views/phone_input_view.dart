@@ -49,7 +49,7 @@ class _PhoneInputViewState extends State<PhoneInputView> {
                   hintStyle: TextStyle(color: Colors.grey[400]),
                   contentPadding: const EdgeInsets.all(12),
                   border: InputBorder.none,
-                  errorText: _validate ? 'Phai nhap du 10 so' : null,
+                  errorText: _validate ? 'Must enter at least 10 digits' : null,
                 ),
                 keyboardType: TextInputType.phone,
                 onChanged: (value) {

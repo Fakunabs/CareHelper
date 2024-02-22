@@ -72,10 +72,9 @@ class _LoginViewState extends State<LoginView> {
     return Scaffold(
       body: Column(
         children: [
-          HeaderPhoneInputWidget(
-            heading1: LocaleKeys.auth_sign_in.tr(),
-            heading2:
-                LocaleKeys.auth_please_enter_phone_number_and_password.tr(),
+          const HeaderPhoneInputWidget(
+            heading1: 'Sign In',
+            heading2: 'Enter your phone number and password to sign in',
           ),
           Form(
             child: Container(
@@ -92,13 +91,12 @@ class _LoginViewState extends State<LoginView> {
                     child: TextFormField(
                       controller: phoneController,
                       decoration: InputDecoration(
-                        label: Text(LocaleKeys.auth_phone_number.tr()),
+                        label: const Text('Phone number'),
                         hintStyle: TextStyle(color: Colors.grey[400]),
                         contentPadding: const EdgeInsets.all(12),
                         border: InputBorder.none,
-                        errorText: _validate
-                            ? LocaleKeys.auth_must_enter_10_digits.tr()
-                            : null,
+                        errorText:
+                            _validate ? 'Must enter at least 10 digits' : null,
                       ),
                       keyboardType: TextInputType.phone,
                       onChanged: (value) {
@@ -120,7 +118,7 @@ class _LoginViewState extends State<LoginView> {
                       controller: passwordController,
                       obscureText: true,
                       decoration: InputDecoration(
-                        label: Text(LocaleKeys.texts_password.tr()),
+                        label: const Text('Password'),
                         hintStyle: TextStyle(color: Colors.grey[400]),
                         contentPadding: const EdgeInsets.all(12),
                         border: InputBorder.none,
@@ -132,9 +130,9 @@ class _LoginViewState extends State<LoginView> {
                     children: [
                       TextButton(
                         onPressed: () => _onTapForgotPassword(),
-                        child: Text(
-                          LocaleKeys.texts_forgot_password.tr(),
-                          style: const TextStyle(color: ColorStyles.blue700),
+                        child: const Text(
+                          'Forgot password?',
+                          style: TextStyle(color: ColorStyles.blue700),
                         ),
                       ),
                     ],
@@ -147,7 +145,7 @@ class _LoginViewState extends State<LoginView> {
           Container(
             margin: const EdgeInsets.only(left: 16, right: 16),
             child: CustomButtonWidget(
-              label: LocaleKeys.auth_sign_in.tr(),
+              label: 'Sign In',
               // onPressed: () => _loginPatient(),
               onPressed: () {
                 Navigator.pushNamedAndRemoveUntil(

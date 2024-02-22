@@ -25,7 +25,7 @@ class MyView extends StatelessWidget {
           AdministrativeTextFormField(
             labelText: 'Name',
             hintText: 'Enter your name',
-            initialValue: 'Arthur Smith',
+            initialValue: '', //Arthur Smith
           ),
           Row(
             children: [
@@ -33,7 +33,7 @@ class MyView extends StatelessWidget {
                 child: AdministrativeTextFormField(
                   labelText: 'Date of birth',
                   hintText: 'Enter your date of birth',
-                  initialValue: '01/01/1990',
+                  initialValue: '', // 01/01/1990
                 ),
               ),
               SizedBox(width: 4),
@@ -41,7 +41,7 @@ class MyView extends StatelessWidget {
                 child: AdministrativeTextFormField(
                   labelText: 'Gender',
                   hintText: 'Enter your gender',
-                  initialValue: 'MALE',
+                  initialValue: '', // MALE
                 ),
               ),
             ],
@@ -49,22 +49,22 @@ class MyView extends StatelessWidget {
           AdministrativeTextFormField(
             labelText: 'Citizen ID',
             hintText: 'Enter your citizen id',
-            initialValue: '1234567890',
+            initialValue: '', // 1234567890
           ),
           AdministrativeTextFormField(
             labelText: 'Medical insurance ID',
             hintText: 'Enter your insurance id',
-            initialValue: '0123456789',
+            initialValue: '', // 0123456789
           ),
           AdministrativeTextFormField(
             labelText: 'Address',
             hintText: 'Enter your address',
-            initialValue: '123 Main Street, New York, NY 10030',
+            initialValue: '', // 123 Main Street, New York, NY 10030
           ),
           AdministrativeTextFormField(
             labelText: 'Occupation',
             hintText: 'Enter your occupation',
-            initialValue: 'Software Engineer',
+            initialValue: '', // Software Engineer
           ),
           Row(
             children: [
@@ -72,7 +72,7 @@ class MyView extends StatelessWidget {
                 child: AdministrativeTextFormField(
                   labelText: 'Height',
                   hintText: 'Enter your height',
-                  initialValue: '180',
+                  initialValue: '', // 180
                 ),
               ),
               SizedBox(width: 4),
@@ -80,7 +80,7 @@ class MyView extends StatelessWidget {
                 child: AdministrativeTextFormField(
                   labelText: 'Weight',
                   hintText: 'Enter your weight',
-                  initialValue: '80',
+                  initialValue: '', // 80
                 ),
               ),
             ],
@@ -88,7 +88,7 @@ class MyView extends StatelessWidget {
           AdministrativeTextFormField(
             labelText: 'Recent check up',
             hintText: 'Enter your recent check up',
-            initialValue: '01/01/2021',
+            initialValue: '', // 01/01/2021
           ),
         ],
       ),

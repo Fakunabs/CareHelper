@@ -58,8 +58,8 @@ class _PinAuthenViewState extends State<PinAuthenView> {
       body: Column(
         children: [
           HeaderPhoneInputWidget(
-            heading1: 'Confirmination',
-            heading2: '6 digits have been sent ${widget.phoneNumber}',
+            heading1: 'Confirmation',
+            heading2: '6 digits have been sent to ${widget.phoneNumber}',
           ),
           const SizedBox(height: 24),
           Form(
@@ -77,7 +77,7 @@ class _PinAuthenViewState extends State<PinAuthenView> {
                     defaultPinTheme: defaultPinTheme,
                     separatorBuilder: (index) => const SizedBox(width: 8),
                     validator: (value) {
-                      return value == '222222' ? null : 'Ma pin sai';
+                      return value == '222222' ? null : 'Incorrect PIN';
                     },
                     hapticFeedbackType: HapticFeedbackType.lightImpact,
                     onCompleted: (pin) {
@@ -126,13 +126,13 @@ class _PinAuthenViewState extends State<PinAuthenView> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            'Chua nhan duoc ma?',
+                            'Haven\'t received the PIN?',
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
                               fontSize: 16,
                             ),
                           ),
-                          Text('Gui lai ma trong 00:00'),
+                          Text('Resend the PIN in 00:00'),
                         ],
                       ),
                       ElevatedButton(
@@ -145,7 +145,7 @@ class _PinAuthenViewState extends State<PinAuthenView> {
                         ),
                         onPressed: () {},
                         child: const Text(
-                          'Gui lai ma',
+                          'Resend PIN',
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                             color: Colors.white,

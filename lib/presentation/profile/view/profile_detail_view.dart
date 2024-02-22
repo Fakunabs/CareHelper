@@ -8,9 +8,10 @@ import 'package:flutter_template/presentation/profile/medical_history/view/medic
 import 'package:flutter_template/presentation/profile/profile.dart';
 import 'package:flutter_template/presentation/profile/widgets/custom_button.dart';
 import 'package:flutter_template/presentation/profile/widgets/custom_category.dart';
+import 'package:flutter_template/router/app_router.dart';
 
 class ProfileDetailView extends StatefulWidget {
-  const ProfileDetailView({super.key});
+  const ProfileDetailView({Key? key}) : super(key: key);
 
   @override
   State<ProfileDetailView> createState() => _ProfileDetailViewState();
@@ -18,6 +19,26 @@ class ProfileDetailView extends StatefulWidget {
 
 class _ProfileDetailViewState extends State<ProfileDetailView> {
   int selectedView = 0;
+
+  void _showAlertDialog(BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: const Text('Notification'),
+          content: const Text('The profile information has been updated'),
+          actions: <Widget>[
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+              child: const Text('OK'),
+            ),
+          ],
+        );
+      },
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -88,11 +109,16 @@ class _ProfileDetailViewState extends State<ProfileDetailView> {
                               borderRadius:
                                   BorderRadius.all(Radius.circular(8)),
                             ),
-                            child: const CustomButton(
+                            child: CustomButton(
                               text: 'Save',
                               width: double.infinity,
                               height: 50,
                               textSize: 16,
+                              onPressed: () {
+                                _showAlertDialog(context); // Pass context here
+                              },
+                              color: ColorStyles
+                                  .categoryButtonColor, // Set button color to red
                             ),
                           ),
                           const SizedBox(height: 8),
@@ -108,10 +134,10 @@ class _ProfileDetailViewState extends State<ProfileDetailView> {
                               height: 50,
                               textSize: 16,
                               onPressed: () {
-                                Navigator.of(context).push(
-                                  MaterialPageRoute(
-                                    builder: (_) => const ProfilePage(),
-                                  ),
+                                Navigator.pushNamedAndRemoveUntil(
+                                  context,
+                                  AppRouter.root,
+                                  (route) => false,
                                 );
                               },
                               color: ColorStyles.categoryButtonColor,

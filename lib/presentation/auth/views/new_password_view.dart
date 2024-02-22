@@ -4,7 +4,7 @@ import 'package:flutter_template/presentation/auth/widgets/header_phone_input_wi
 import 'package:flutter_template/router/app_router.dart';
 
 class NewPasswordView extends StatefulWidget {
-  const NewPasswordView({super.key});
+  const NewPasswordView({Key? key}) : super(key: key);
 
   @override
   State<NewPasswordView> createState() => _NewPasswordScreenState();
@@ -42,8 +42,8 @@ class _NewPasswordScreenState extends State<NewPasswordView> {
       body: Column(
         children: [
           const HeaderPhoneInputWidget(
-            heading1: 'Tao mat khau moi',
-            heading2: 'Nhap mot mat khau de nho',
+            heading1: 'Create New Password',
+            heading2: 'Enter a password to remember',
           ),
           Form(
             child: Column(
@@ -60,12 +60,12 @@ class _NewPasswordScreenState extends State<NewPasswordView> {
                     controller: _passwordController,
                     obscureText: true,
                     decoration: InputDecoration(
-                      label: const Text('Mat khau'),
+                      labelText: 'Password',
                       hintStyle: TextStyle(color: Colors.grey[400]),
                       contentPadding: const EdgeInsets.all(8),
                       border: InputBorder.none,
                       errorText: _validate
-                          ? 'Mat khau nen dai tu 8 ky tu tro len'
+                          ? 'Password should be at least 8 characters long'
                           : null,
                     ),
                     keyboardType: TextInputType.visiblePassword,
@@ -89,11 +89,11 @@ class _NewPasswordScreenState extends State<NewPasswordView> {
                     obscureText: true,
                     onChanged: (_) => _checkPasswordMatch(),
                     decoration: InputDecoration(
-                      label: const Text('Xac nhan mat khau'),
+                      labelText: 'Confirm Password',
                       hintStyle: TextStyle(color: Colors.grey[400]),
                       contentPadding: const EdgeInsets.all(8),
                       border: InputBorder.none,
-                      errorText: isMatch ? null : 'Mat khau khong trung khop',
+                      errorText: isMatch ? null : 'Passwords do not match',
                     ),
                     keyboardType: TextInputType.visiblePassword,
                   ),

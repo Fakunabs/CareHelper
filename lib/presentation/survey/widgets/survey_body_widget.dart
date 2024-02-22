@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_template/presentation/survey/widgets/survey_question.widget.dart';
 
 class SurveyBodyWidget extends StatelessWidget {
-  const SurveyBodyWidget({super.key});
+  const SurveyBodyWidget({
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -10,38 +12,111 @@ class SurveyBodyWidget extends StatelessWidget {
       color: const Color(0xFFBDDDFD),
       elevation: 0,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-      child: const Padding(
-        padding: EdgeInsets.all(16),
+      child: Padding(
+        padding: const EdgeInsets.all(10),
         child: Column(
           children: [
-            SurveyQuestionWidget(
-              question: 'Mức huyết áp của bệnh nhân là bao nhiêu?',
+            const SurveyQuestionWidget(
+              question: 'What is the patient\'s blood pressure level?',
             ),
-            SizedBox(
+            Padding(
+              padding: const EdgeInsets.fromLTRB(8, 8, 8, 0),
+              child: TextField(
+                style: const TextStyle(fontFamily: 'Roboto'),
+                decoration: InputDecoration(
+                  hintText: 'Enter answer here',
+                  hintStyle: const TextStyle(fontFamily: 'Roboto'),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(8),
+                    borderSide: const BorderSide(
+                      color: Colors.white, // Set the border color to green
+                    ),
+                  ),
+                  filled: true,
+                  fillColor: Colors.white,
+                ),
+              ),
+            ),
+            const SizedBox(
               height: 8,
             ),
-            SizedBox(
+            const SizedBox(
               height: 8,
             ),
-            SurveyQuestionWidget(
-              question: 'Bệnh nhân đang sử dụng những loại thuốc nào?',
+            const SurveyQuestionWidget(
+              question: 'What medications is the patient taking?',
             ),
-            SizedBox(
+            Padding(
+              padding: const EdgeInsets.fromLTRB(8, 8, 8, 0),
+              child: TextField(
+                style: const TextStyle(fontFamily: 'Roboto'),
+                decoration: InputDecoration(
+                  hintText: 'Enter answer here',
+                  hintStyle: const TextStyle(fontFamily: 'Roboto'),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(8),
+                    borderSide: const BorderSide(
+                      color: Colors.white, // Set the border color to green
+                    ),
+                  ),
+                  filled: true,
+                  fillColor: Colors.white,
+                ),
+              ),
+            ),
+            const SizedBox(
               height: 8,
             ),
-            SurveyQuestionWidget(
-              question: 'Cảm giác và tâm trạng của bệnh nhân như thế nào?',
+            const SurveyQuestionWidget(
+              question: 'How does the patient feel emotionally and mentally?',
             ),
-            SizedBox(
+            Padding(
+              padding: const EdgeInsets.fromLTRB(8, 8, 8, 0),
+              child: TextField(
+                style: const TextStyle(fontFamily: 'Roboto'),
+                decoration: InputDecoration(
+                  hintText: 'Enter answer here',
+                  hintStyle: const TextStyle(fontFamily: 'Roboto'),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(8),
+                    borderSide: const BorderSide(
+                      color: Colors.white, // Set the border color to green
+                    ),
+                  ),
+                  filled: true,
+                  fillColor: Colors.white,
+                ),
+              ),
+            ),
+            const SizedBox(
               height: 8,
             ),
-            SurveyQuestionWidget(
+            const SurveyQuestionWidget(
               question:
-                  'Bệnh nhân có ngủ đủ 8 tiếng 1 ngày hay không, có làm việc quá sức không?',
+                  'Does the patient get enough sleep (at least 8 hours a day), and is the patient overworking?',
+            ),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(8, 8, 8, 0),
+              child: TextField(
+                style: const TextStyle(fontFamily: 'Roboto'),
+                decoration: InputDecoration(
+                  hintText: 'Enter answer here',
+                  hintStyle: const TextStyle(fontFamily: 'Roboto'),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(8),
+                    borderSide: const BorderSide(
+                      color: Colors.white, // Set the border color to green
+                    ),
+                  ),
+                  filled: true,
+                  fillColor: Colors.white,
+                ),
+              ),
             ),
           ],
         ),
       ),
     );
   }
-}
+
+  }

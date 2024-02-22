@@ -107,12 +107,14 @@ class _TestDetailPageState extends State<TestDetailPage> {
     required String secondText,
     required String thirdText,
   }) {
-    return Column(
-      children: [
-        const SizedBox(height: 10),
-        Row(
-          children: [
-            Text(
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 10.0),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Expanded(
+            flex: 3,
+            child: Text(
               firstText,
               style: const TextStyle(
                 fontFamily: 'Roboto',
@@ -122,19 +124,25 @@ class _TestDetailPageState extends State<TestDetailPage> {
                 height: 1.2,
               ),
             ),
-            const Spacer(),
-            Text(
-              secondText,
-              style: const TextStyle(
-                fontFamily: 'Roboto',
-                fontSize: 18,
-                fontWeight: FontWeight.w400,
-                color: Colors.white,
-                height: 1.2,
+          ),
+          Padding(
+            padding: const EdgeInsets.only(right: 80),
+            child: Expanded(
+              flex: 2,
+              child: Text(
+                secondText,
+                style: const TextStyle(
+                  fontFamily: 'Roboto',
+                  fontSize: 18,
+                  fontWeight: FontWeight.w400,
+                  color: Colors.white,
+                  height: 1.2,
+                ),
               ),
             ),
-            const Spacer(),
-            Text(
+          ),
+          Expanded(
+            child: Text(
               thirdText,
               style: const TextStyle(
                 fontFamily: 'Roboto',
@@ -144,11 +152,9 @@ class _TestDetailPageState extends State<TestDetailPage> {
                 height: 1.2,
               ),
             ),
-            const SizedBox(width: 40),
-          ],
-        ),
-        const SizedBox(height: 10),
-      ],
+          ),
+        ],
+      ),
     );
   }
 
@@ -157,12 +163,14 @@ class _TestDetailPageState extends State<TestDetailPage> {
     required String secondText,
     required String thirdText,
   }) {
-    return Column(
-      children: [
-        const SizedBox(height: 10),
-        Row(
-          children: [
-            Text(
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 10.0),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Expanded(
+            flex: 3,
+            child: Text(
               firstText,
               style: const TextStyle(
                 fontFamily: 'Roboto',
@@ -172,8 +180,10 @@ class _TestDetailPageState extends State<TestDetailPage> {
                 height: 1.2,
               ),
             ),
-            const Spacer(),
-            Text(
+          ),
+          Expanded(
+            flex: 2,
+            child: Text(
               secondText,
               style: const TextStyle(
                 fontFamily: 'Roboto',
@@ -183,8 +193,9 @@ class _TestDetailPageState extends State<TestDetailPage> {
                 height: 1.2,
               ),
             ),
-            const Spacer(),
-            Text(
+          ),
+          Expanded(
+            child: Text(
               thirdText,
               style: const TextStyle(
                 fontFamily: 'Roboto',
@@ -194,11 +205,9 @@ class _TestDetailPageState extends State<TestDetailPage> {
                 height: 1.2,
               ),
             ),
-            const SizedBox(width: 50),
-          ],
-        ),
-        const SizedBox(height: 10),
-      ],
+          ),
+        ],
+      ),
     );
   }
 }
