@@ -1,133 +1,131 @@
-# flutter_template
+<p align="center">
+    <h1 align="center">CareHelper 🏥</h1>
+  </a>
+</p>
 
-A new Flutter project.
+<p align="center">
+    <img src="https://i.ibb.co/SP4LCzP/care-helper-logo.png" alt="ava" border="0" width="300px">
+</p>
+<!-- Here is app icon placeholder -->
 
-## Getting Started
+> CareHelper - A platform for patients and for doctors that helps the communication process between them more convenient during long-term examinations.
 
-This project is a starting point for a Flutter application.
+This project will join [GDSC Solution Challenge 2024](https://developers.google.com/community/gdsc-solution-challenge).
 
-A few resources to get you started if this is your first Flutter project:
+## Technology used ✨
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+-   [Flutter & Dart](https://flutter.dev/)
+-   [React.js](https://reactjs.org/)
+-   [Firebase](https://firebase.google.com/)
+-   [NodeJs](https://nodejs.org/en)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+</details>
 
-## Setup environment before running
+## Setup and run
 
-if you have any environment variable, you should add it to config.json
+<details>
+    <summary>Click to expand</summary>
+    <br>    
+    <h3>Clone the repo</h3>
 
-## Run build_runner
-
-Run:
-
-```bash
-$ fvm flutter pub run build_runner build --delete-conflicting-outputs
+```sh
+git clone https://github.com/dscdut/care-helper
 ```
 
-## Generate localizations
+   <h3>Backend</h3>
 
-View [document](https://pub.dev/packages/easy_localization) for details
+1. Prerequisites
 
-Run:
+-   Install node
+    <https://nodejs.org/en/download/>
 
-```bash
-$ fvm flutter pub run easy_localization:generate -S assets/locales
-$ fvm flutter pub run easy_localization:generate -S assets/locales -f keys -o locale_keys.g.dart
+-   Install yarn
+
+```sh
+npm install --global yarn
 ```
 
-## Generate app flavor
+2. Install NPM packages
 
-View [document](https://pub.dev/packages/flutter_flavorizr) for details
-
-Run:
-
-```bash
-$ fvm flutter pub run flutter_flavorizr
-```
-If you encounter the issue about "tmp script sh" when generate firebase service. You must run: 
-```bash
-$ fvm flutter pub run flutter_flavorizr -p assets:download,assets:extract,google:firebase,assets:clean
-```
-## Generate Assets dart code from assets folder
-
-### With Flutter Gen
-
-Install Flutter Gen
-
-```bash
-$ dart pub global activate flutter_gen
+```sh
+cd backend
+# run database migrations and seeds
+npm run db:reset
+yarn install
 ```
 
-Or add it as a part of build_runner
+3. Run the development server:
 
 ```bash
-dev_dependencies:
-  build_runner:
-  flutter_gen_runner:
+yarn start
 ```
 
-Run Flutter Gen
-With command line
+4. Open [http://localhost:3000](http://localhost:3000).
+
+ <h3>Mobile</h3>
+  
+ 1. Change directory:
+  
+ ```bash
+  cd ..
+  cd mobile
+ ```
+  
+ 2. Get the dependencies:
+  
+ ```bash
+ flutter pub get
+ ```
+  
+ 3. Start build APK release file:
+  
+ ```bash
+ flutter build apk --release -t lib/main_staging.dart --flavor=staging
+ ```
+
+<!-- - Download APK
+  - [APK - arm64](https://drive.google.com/file/d/1r5BxLCoTn2JqQuEjAtoUxmZeSHIByEKa/view?usp=sharing)
+- Setup and run
+  - Flutter
+    - Install [Flutter](https://flutter.dev/docs/get-started/install).
+    - Using **`stable`** channel:
+      ```bash
+      ❯ flutter channel stable
+      ❯ flutter upgrade
+      ```
+    - Flutter doctor:
+      ```bash
+      ❯ flutter doctor
+      ```
+    - Install all the packages by:
+      ```bash
+      ❯ flutter pub get
+      ```
+    - Create .env file `assets/.env` has following structure:
+      ```bash
+      BASE_URL=https://api.smartfood.cooking/api
+      ```
+    - Run app on real devices or emulator by:
+      ```bash
+      ❯ flutter run
+      ```
+      or debug mode in VSCode or some IDEs -->
+<h3>Frontend</h3>
+
+1. Install dependencies
+
+```sh
+cd frontend
+# run database migrations and seeds
+npm run install
+```
+
+2. Run the development server:
 
 ```bash
-$ fluttergen -c pubspec.yaml
+npm run dev
 ```
 
-With build_runner
+3. Open the running port
 
-```bash
-$ fvm flutter pub run build_runner build
-```
-
-## Generate template code with mason_cli
-
-View [document](https://github.com/felangel/mason/tree/master/packages/mason_cli#readme) for details
-
-### Install mason_cli
-
-Active from https://pub.dev
-
-```bash
-$ dart pub global activate mason_cli
-```
-
-Or install from https://brew.sh
-
-```bash
-$ brew tap felangel/mason
-$ brew install mason
-```
-
-### Initializing
-
-Get all bricks registered in mason.yaml run:
-
-```bash
-$ mason get
-```
-
-Then you can use 'mason make' to generate bricks.
-Suppose you want to generate a module with bloc, you should run
-
-```bash
-$ mason make bloc_module -o lib/presentation
-```
-
-## Flutter build
-
-### Build Android release
-
-- fvm flutter build apk --release --flavor <env*name> -t lib/main*<env_name>.dart
-
-Example: Build STAGING
-
-```bash
-fvm flutter build apk --release --flavor staging -t lib/main_staging.dart
-```
-
-### Bundle Android Release
-
-fvm flutter build appbundle --flavor staging -t lib/main_stating.dart
+</details>
